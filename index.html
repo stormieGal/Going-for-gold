@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="./js/polyfill.min.js"></script>
+
+    <!-- Fallbacks for CSS custom variables-->
+    <script>
+      window.MSInputMethodContext &&
+        document.documentMode &&
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\x2fscript>'
+        );
+    </script>
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>starter code</title>
+  </head>
+  <body class="row">
+    <div class="wrapper row">
+      <div class="header row" id="welcome">
+        <h1>Going for gold.</h1>
+        <nav>
+          <ul>
+            <li class="start-li">
+              <a href="#game" class="btn start">Play!</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="game-wrapper row" id="game">
+        <header class="row">
+          <div class="brand">
+            <picture>
+              <img src="./images/message-square.svg" alt="Logo" />
+            </picture>
+            <h1>Going for a gold</h1>
+          </div>
+          <nav>
+            <a href="#options-settings">
+              <img src="./images/settings.svg" alt="Settings" />
+            </a>
+            <ul id="options-settings">
+              <li><a href="#">New game!</a></li>
+              <li><a href="#">Stats</a></li>
+              <li><a href="#welcome">exit</a></li>
+            </ul>
+          </nav>
+
+          <!-- <nav>
+            <ul>
+              <li><a href="#">Start a new game</a></li>
+              <li><a href="#">Stats</a></li>
+              <li><a href="#welcome">exit</a></li>
+            </ul>
+          </nav> -->
+        </header>
+        <main>
+          <div class="game-info row">
+            <div class="round row">
+              <label for="numRound">Round</label>
+              <input
+                type="number"
+                id="numRound"
+                disabled
+                value="1"
+                class="counter"
+              />
+            </div>
+            <div class="score row">
+              <label for="numScore">Score</label>
+              <input
+                type="number"
+                id="numScore"
+                disabled
+                value="1"
+                class="counter"
+              />
+            </div>
+          </div>
+          <div class="question-container ">
+            <div class="question-counter row">
+              <h2>
+                Question <span id="numQuestion" class="counter">1</span> /
+                <span id="totalQuestions">10</span>
+              </h2>
+              <p class="counter" id="questionTopic">Science: computers</p>
+            </div>
+            <div class="the-question">
+              <p class="question-author">
+                A question from <span id="questionAuthor">...</span>
+              </p>
+              <p id="questionText" class="questionText">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Dolorem, sint reiciendis? Labore laboriosam aperiam iste veniam
+                perspiciatis assumenda odio voluptatibus!
+              </p>
+            </div>
+            <div class="the-answers row">
+              <div class="answer">
+                Answer1
+              </div>
+              <div class="answer">
+                Answer1
+              </div>
+              <div class="answer">
+                Answer1
+              </div>
+              <div class="answer">
+                Answer1
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer>
+        <p>
+          &copy;2020 | <a href="https://twitter.com/GalStormie">stormieGal</a>
+        </p>
+      </footer>
+    </div>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
